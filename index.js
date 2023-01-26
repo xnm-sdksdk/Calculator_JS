@@ -2,7 +2,38 @@
 
 class Calculator {
     constructor(previousOp, currentOp) {
+        this.previousOp = previousOp;
+        this.currentOp = currentOp;
     }
+
+
+    clear(){
+    }
+
+    delete(){
+    }
+
+    addNumber(number) {
+
+    }
+
+    chooseOperation(operation) {
+    }
+
+    compute(){
+
+    }
+
+    updateDisplay(){
+    }
+
+
+
+
+
+
+
+
 }
 
 
