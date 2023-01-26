@@ -9,7 +9,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: #1a1a1a;
+    background-color: #acacac;
 }
 
 
@@ -32,7 +32,55 @@ body {
 }
 
 
-
 .grid > button:hover {
     background-color: rgba(255,255,255, .9);
 }
+
+
+.space-two {
+    grid-column: span 2;
+}
+
+
+.result {
+    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+.result .previous {
+    color: rgba(255,255,255, .75);
+    font-size: 1.5rem;
+
+}
+
+
+.result .current {
+    color: white;
+    font-size: 2.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
