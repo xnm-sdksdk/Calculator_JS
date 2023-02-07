@@ -25,7 +25,7 @@ body {
 .grid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1.5px solid #fff;
+    border: 1px solid #fff;
     outline: none;
     background-color: rgba(255,255,255, .75);
 
@@ -45,6 +45,7 @@ body {
 .result {
     grid-column: 1 / -1;
     background-color: rgba(44, 44, 44, 0.75);
+    height: 100px;
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
