@@ -2,8 +2,8 @@
 
 class Calculator {
     constructor(previousOpTextElement, currentOpTextElement) {
-        this.previousOp = previousOpTextElement;
-        this.currentOp = currentOpTextElement;
+        this.previousOpTextElement = previousOpTextElement;
+        this.currentOpTextElement = currentOpTextElement;
         this.clear();
     }
 
@@ -81,8 +81,7 @@ class Calculator {
     updateDisplay(){
         this.currentOpTextElement.innerText = this.getNumber(this.currentOp)
         if (this.operation != null) {
-            this.previousOpTextElement.innerText = this.previousOp
-            `${this.getNumber(this.previousOp)} ${this.operation}`
+            this.previousOpTextElement.innerText = `${this.getNumber(this.previousOp)} ${this.operation}`
         } else {
             this.previousOpTextElement.innerText = ''
         }
