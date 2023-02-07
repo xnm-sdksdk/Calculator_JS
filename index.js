@@ -1,20 +1,26 @@
 
 
 class Calculator {
-    constructor(previousOp, currentOp) {
-        this.previousOp = previousOp;
-        this.currentOp = currentOp;
+    constructor(previousOpTextElement, currentOpTextElement) {
+        this.previousOp = previousOpTextElement;
+        this.currentOp = currentOpTextElement;
+        this.clear();
     }
 
 
     clear(){
+        this.currentOp = '';
+        this.previousOp = '';
+        this.operation = undefined;
     }
 
     delete(){
+        this.currentOp = this.currentOp.toString().slice(0, -1);
     }
 
     addNumber(number) {
-
+        if(number === '.' && this.currentOp.includes('.')) return
+        this.currentOp = this.currentOp.toString() + number.toString();
     }
 
     chooseOperation(operation) {
@@ -25,6 +31,7 @@ class Calculator {
     }
 
     updateDisplay(){
+        this.currentOpTextElement.innerText = this.currentOp;
     }
 
 
@@ -48,7 +55,15 @@ const currentOp = document.querySelector("[data-current]");
 
 
 
+const calculator = new Calculator(previousOp, currentOp)
 
+numberButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        calculator.addNumber(button.innerText);
+        calculator.updateDisplay();
+    })
+
+})
 
 
 
